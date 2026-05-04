@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto'
 import { Readable, Transform } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
 import { stringify } from 'csv-stringify'
@@ -52,7 +53,7 @@ export async function exportLinksCsv(): Promise<
   const uploadToStorage = uploadFile({
     contentType: 'text/csv',
     folder: 'downloads',
-    fileName: 'links.csv',
+    fileName: `links-${randomUUID()}.csv`,
     contentStream: csv,
   })
 
