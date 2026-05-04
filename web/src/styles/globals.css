@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --blue-base: #2c46b1;
+  --blue-dark: #2c4091;
+  --white: #ffffff;
+  --gray-100: #f9f9fb;
+  --gray-200: #e4e6ec;
+  --gray-300: #cdcfd5;
+  --gray-400: #74798b;
+  --gray-500: #4d505c;
+  --gray-600: #1f2025;
+  --danger: #b12c4d;
+
+  --font-sans: "Open Sans", sans-serif;
+
+  font-family: var(--font-sans);
+  color: var(--gray-600);
+  background: var(--gray-200);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --font-sans: "Open Sans", sans-serif;
+
+  --color-blue-base: #2c46b1;
+  --color-blue-dark: #2c4091;
+  --color-white: #ffffff;
+  --color-gray-100: #f9f9fb;
+  --color-gray-200: #e4e6ec;
+  --color-gray-300: #cdcfd5;
+  --color-gray-400: #74798b;
+  --color-gray-500: #4d505c;
+  --color-gray-600: #1f2025;
+  --color-danger: #b12c4d;
+
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 2rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5rem;
+  --text-md: 0.875rem;
+  --text-md--line-height: 1.125rem;
+  --text-sm: 0.75rem;
+  --text-sm--line-height: 1rem;
+  --text-xs: 0.625rem;
+  --text-xs--line-height: 0.875rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@keyframes top-loading-bar {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.top-loading-bar {
+  animation: top-loading-bar 1.2s ease-in-out infinite;
+}
+
+.links-scroll-area {
+  scrollbar-color: var(--blue-base) var(--gray-200);
+  scrollbar-width: thin;
+}
+
+.links-scroll-area::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.links-scroll-area::-webkit-scrollbar-track {
+  background: var(--gray-200);
+  border-radius: 999px;
+}
+
+.links-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--blue-base);
+  border-radius: 999px;
+}
