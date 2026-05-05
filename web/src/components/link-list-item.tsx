@@ -31,7 +31,7 @@ export function LinkListItem({
       <div className="min-w-0 flex-1">
         <a
           className="block truncate text-md font-semibold text-blue-base"
-          href={link.originalUrl}
+          href={shortLink}
           onClick={() => onOpen(link)}
           rel="noreferrer noopener"
           target="_blank"
